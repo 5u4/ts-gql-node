@@ -4,7 +4,8 @@
   "description": "🥳 Typescript + GraphQL + Neo4J + Node.js template",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "serve": "nodemon --exec ts-node --files src/server.ts",
+    "test": "mocha -r ts-node/register ./tests/**/*.test.ts --exit"
   },
   "repository": {
     "type": "git",
@@ -38,12 +39,15 @@
     "@types/chai": "^4.1.7",
     "@types/chai-http": "^3.0.5",
     "@types/dotenv": "^6.1.0",
+    "@types/expect": "^1.20.3",
     "@types/mocha": "^5.2.5",
+    "@types/morgan": "^1.7.35",
     "@types/node": "^10.12.12",
     "@types/yup": "^0.26.3",
     "chai": "^4.2.0",
     "chai-http": "^4.2.0",
     "mocha": "^5.2.0",
+    "morgan": "^1.9.1",
     "nodemon": "^1.18.8",
     "ts-node": "^7.0.1",
     "tslint": "^5.12.0",

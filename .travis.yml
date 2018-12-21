@@ -1,0 +1,15 @@
+language: node_js
+
+node_js:
+  - "stable"
+
+notifications:
+  email: false
+
+cache:
+  directories:
+    - "node_modules"
+
+branches:
+  only:
+    - master
