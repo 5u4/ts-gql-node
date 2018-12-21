@@ -1,0 +1,25 @@
+{
+  "name": "ts-gql-neo-node",
+  "version": "1.0.0",
+  "description": "🥳 Typescript + GraphQL + Neo4J + Node.js template",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/senhungwong/ts-gql-neo-node.git"
+  },
+  "keywords": [
+    "typescript",
+    "graphql",
+    "neo4j",
+    "nodejs"
+  ],
+  "author": "Senhung Wong <0x53656e@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/senhungwong/ts-gql-neo-node/issues"
+  },
+  "homepage": "https://github.com/senhungwong/ts-gql-neo-node#readme"
+}
