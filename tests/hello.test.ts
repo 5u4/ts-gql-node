@@ -1,6 +1,6 @@
-import "mocha";
-import { hello } from "../src/graphql/resolvers/hello.resolver";
 import { expect } from "chai";
+import "mocha";
+import { hello } from "../src/services/hello.service";
 
 describe("Test hello endpoint", () => {
     it("responses hello", () => {

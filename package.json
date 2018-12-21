@@ -4,8 +4,12 @@
   "description": "🥳 Typescript + GraphQL + Neo4J + Node.js template",
   "main": "index.js",
   "scripts": {
+    "generate": "yarn merge-schemas && yarn gql2ts && yarn graphdoc",
+    "gql2ts": "yarn merge-schemas && ts-node ./src/scripts/gql2ts.ts",
+    "graphdoc": "yarn merge-schemas && graphdoc -s ./src/schema.graphql -o ./docs/graphql -f",
+    "merge-schemas": "ts-node ./src/scripts/mergeSchemas.ts",
     "serve": "nodemon --exec ts-node --files src/server.ts",
-    "test": "mocha -r ts-node/register ./tests/**/*.test.ts --exit"
+    "test": "mocha --require ts-node/register ./tests/**/*.test.ts --files --exit"
   },
   "repository": {
     "type": "git",

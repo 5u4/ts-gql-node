@@ -1,14 +1,9 @@
 import { GraphQLServer } from "graphql-yoga";
-import { resolvers } from "../graphql/resolvers/hello.resolver";
 import * as morgan from "morgan";
+import { resolvers } from "../utils/resolvers";
+import { typeDefs } from "../utils/typedefs";
 
 export const build = () => {
-    const typeDefs = `
-        type Query {
-            hello(name: String): String!
-        }
-    `;
-
     const app = new GraphQLServer({ typeDefs, resolvers });
 
     if (process.env.NODE_ENV === "local") {
@@ -21,7 +16,10 @@ export const build = () => {
 export const serve = async () => {
     const app = build();
 
-    const server = await app.start();
+    const server = await app.start(svr => {
+        // tslint:disable-next-line:no-console
+        console.log(`🚀 Server started\n`, svr);
+    });
 
     return server;
 };
