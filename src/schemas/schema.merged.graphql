@@ -1,7 +1,19 @@
 schema {
   query: Query
+  mutation: Mutation
 }
 
 type Query {
   hello(name: String): String!
+  posts(page: Int, perPage: Int): [Post]!
+}
+
+type Mutation {
+  createPost(content: String!): Post
+}
+
+type Post {
+  id: Int!
+  content: String!
+  createdAt: Int!
 }

@@ -3,7 +3,7 @@
 
 declare namespace GQL {
 interface IGraphQLResponseRoot {
-data?: IQuery;
+data?: IQuery | IMutation;
 errors?: Array<IGraphQLResponseError>;
 }
 
@@ -23,10 +23,32 @@ column: number;
 interface IQuery {
 __typename: "Query";
 hello: string;
+posts: Array<IPost | null>;
 }
 
 interface IHelloOnQueryArguments {
 name?: string | null;
+}
+
+interface IPostsOnQueryArguments {
+page?: number | null;
+perPage?: number | null;
+}
+
+interface IPost {
+__typename: "Post";
+id: number;
+content: string;
+createdAt: number;
+}
+
+interface IMutation {
+__typename: "Mutation";
+createPost: IPost | null;
+}
+
+interface ICreatePostOnMutationArguments {
+content: string;
 }
 }
 
