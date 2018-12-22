@@ -1,3 +1,4 @@
-import { exceptionHandler } from "./exception.handler";
+import { validations } from "../validators/index";
+import { exceptionHandler } from "./handler";
 
-export const middlewares = [exceptionHandler];
+export const middlewares = [exceptionHandler, validations];

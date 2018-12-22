@@ -10,5 +10,7 @@ export const exceptionHandler = (resolve: any, _: any, __: any, ctx: any) => {
             ctx.response.status(err.statusCode);
             throw new ApolloError(err.message);
         }
+
+        // TODO: Catch validation error so when there are multiple errors, show all of them
     }
 };
