@@ -20,7 +20,13 @@ git clone https://github.com/senhungwong/ts-gql-node.git
 cd ts-gql-node && npm install  # OR yarn
 ```
 
-3. Start server
+3. Set app environment
+
+```
+cp .env.example .env
+```
+
+4. Start server
 
 ```
 npm start  # OR yarn serve
