@@ -1,10 +1,16 @@
 import { GraphQLServer } from "graphql-yoga";
 import * as morgan from "morgan";
+import { middlewares } from "../middlewares";
 import { resolvers } from "../utils/resolvers";
 import { typeDefs } from "../utils/typedefs";
 
 export const build = () => {
-    const app = new GraphQLServer({ typeDefs, resolvers });
+    const app = new GraphQLServer({
+        typeDefs,
+        resolvers,
+        context: req => ({ ...req }),
+        middlewares,
+    });
 
     if (process.env.NODE_ENV === "local") {
         app.use(morgan("dev"));
