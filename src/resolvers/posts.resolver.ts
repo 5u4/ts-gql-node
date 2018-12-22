@@ -3,10 +3,14 @@ import { ResolverMap } from "../types/graphql.type";
 
 const resolvers: ResolverMap = {
     Query: {
-        posts: (_, args: GQL.IPostsOnQueryArguments): GQL.IPost[] => services.posts.index(args.page, args.perPage),
+        posts: async (_, args: GQL.IPostsOnQueryArguments): Promise<GQL.IPost[]> => {
+            return services.posts.index(args.page || 1, args.perPage || 20);
+        },
     },
     Mutation: {
-        createPost: (_, args: GQL.ICreatePostOnMutationArguments): GQL.IPost => services.posts.store(args.content),
+        createPost: async (_, args: GQL.ICreatePostOnMutationArguments): Promise<GQL.IPost> => {
+            return services.posts.store(args.content);
+        },
     },
 };
 
