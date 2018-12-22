@@ -1,23 +1,23 @@
-# TypeScript + GraphQL + Neo4J + Node.js
+# TypeScript + GraphQL + Node.js
 
-![Travis (.org)](https://img.shields.io/travis/senhungwong/ts-gql-neo-node.svg?style=flat-square)
-![MIT License](https://img.shields.io/github/license/senhungwong/ts-gql-neo-node.svg?style=flat-square)
-![GitHub tag](https://img.shields.io/github/tag/senhungwong/ts-gql-neo-node.svg?style=flat-square)
+![Travis (.org)](https://img.shields.io/travis/senhungwong/ts-gql-node.svg?style=flat-square)
+![MIT License](https://img.shields.io/github/license/senhungwong/ts-gql-node.svg?style=flat-square)
+![GitHub tag](https://img.shields.io/github/tag/senhungwong/ts-gql-node.svg?style=flat-square)
 
-A clean template combining TypeScript, GraphQL, Neo4J and Node.js together.
+A clean template combining TypeScript, GraphQL and Node.js together.
 
 ## How to use
 
 1. Clone/fork repository
 
 ```
-git clone https://github.com/senhungwong/ts-gql-neo-node.git
+git clone https://github.com/senhungwong/ts-gql-node.git
 ```
 
 2. Install dependency
 
 ```
-cd ts-gql-neo-node && npm install  # OR yarn
+cd ts-gql-node && npm install  # OR yarn
 ```
 
 3. Start server

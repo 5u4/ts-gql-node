@@ -1,8 +1,7 @@
 {
-  "name": "ts-gql-neo-node",
+  "name": "ts-gql-node",
   "version": "1.0.0",
-  "description": "🥳 Typescript + GraphQL + Neo4J + Node.js template",
-  "main": "index.js",
+  "description": "🥳 Typescript + GraphQL + Node.js template",
   "scripts": {
     "generate": "npm run merge-schemas && npm run gql2ts && npm run graphdoc",
     "gql2ts": "npm run merge-schemas && ts-node ./src/scripts/gql2ts.ts",
@@ -14,7 +13,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/senhungwong/ts-gql-neo-node.git"
+    "url": "git+https://github.com/senhungwong/ts-gql-node.git"
   },
   "keywords": [
     "typescript",
@@ -25,9 +24,9 @@
   "author": "Senhung Wong <0x53656e@gmail.com>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/senhungwong/ts-gql-neo-node/issues"
+    "url": "https://github.com/senhungwong/ts-gql-node/issues"
   },
-  "homepage": "https://github.com/senhungwong/ts-gql-neo-node#readme",
+  "homepage": "https://github.com/senhungwong/ts-gql-node#readme",
   "dependencies": {
     "@senhung/http-exceptions": "^1.1.1",
     "apollo-server": "^2.3.1",
@@ -35,14 +34,12 @@
     "graphql-import": "^0.7.1",
     "graphql-yoga": "^1.16.9",
     "merge-graphql-schemas": "^1.5.8",
-    "simple-neo4j": "^4.3.1",
     "yup": "^0.26.6"
   },
   "devDependencies": {
     "@2fd/graphdoc": "^2.4.0",
     "@gql2ts/from-schema": "^1.10.1",
     "@types/chai": "^4.1.7",
-    "@types/chai-http": "^3.0.5",
     "@types/dotenv": "^6.1.0",
     "@types/expect": "^1.20.3",
     "@types/mocha": "^5.2.5",
@@ -50,7 +47,6 @@
     "@types/node": "^10.12.12",
     "@types/yup": "^0.26.3",
     "chai": "^4.2.0",
-    "chai-http": "^4.2.0",
     "mocha": "^5.2.0",
     "morgan": "^1.9.1",
     "nodemon": "^1.18.8",
