@@ -1,9 +1,9 @@
-import { hello } from "../services/hello.service";
+import { services } from "../services";
 import { ResolverMap } from "../types/graphql.type";
 
 const resolvers: ResolverMap = {
     Query: {
-        hello: (_, args: GQL.IHelloOnQueryArguments) => hello(args.name),
+        hello: (_, args: GQL.IHelloOnQueryArguments) => services.hello(args.name),
     },
 };
 
