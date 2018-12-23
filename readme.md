@@ -66,3 +66,10 @@ npm start  # OR yarn serve
         ```
 
     - Validate arguments in `./src/validators/` and map them in `./src/validators/index.ts`
+
+## Example
+
+See treehole implementation:
+
+[GraphQL](https://github.com/senhungwong/ts-gql-node/tree/treehole-example)
+[Original](https://github.com/senhungwong/treehole-server)
