@@ -1,7 +1,5 @@
-import { helloValidator } from "./hello.validator";
+import { hello } from "./hello.validator";
 
-export const validations = {
-    Query: {
-        hello: helloValidator,
-    },
+export const validators = {
+    hello,
 };
