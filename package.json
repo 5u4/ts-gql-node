@@ -7,6 +7,7 @@
     "gql2ts": "npm run merge-schemas && ts-node ./src/scripts/gql2ts.ts",
     "graphdoc": "npm run merge-schemas && graphdoc -s ./src/schemas/schema.merged.graphql -o ./docs/graphql -f",
     "merge-schemas": "ts-node ./src/scripts/mergeSchemas.ts",
+    "migrate": "ts-node --files ./src/scripts/migrate.ts",
     "serve": "nodemon --exec ts-node --files src/server.ts",
     "start": "npm run serve",
     "test": "mocha --require ts-node/register ./tests/**/*.test.ts --files --exit"
