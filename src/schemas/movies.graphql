@@ -1,0 +1,9 @@
+type Movie {
+    title: String!
+    released: Int!
+    tagline: String
+}
+
+type Query {
+    movies(pagination: paginationInput): [Movie]!
+}

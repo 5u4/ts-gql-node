@@ -23,11 +23,16 @@ column: number;
 interface IQuery {
 __typename: "Query";
 hello: string;
+movies: Array<IMovie | null>;
 people: Array<IPerson | null>;
 }
 
 interface IHelloOnQueryArguments {
 name?: string | null;
+}
+
+interface IMoviesOnQueryArguments {
+pagination?: IPaginationInput | null;
 }
 
 interface IPeopleOnQueryArguments {
@@ -37,6 +42,13 @@ pagination?: IPaginationInput | null;
 interface IPaginationInput {
 page: number;
 perPage: number;
+}
+
+interface IMovie {
+__typename: "Movie";
+title: string;
+released: number;
+tagline: string | null;
 }
 
 interface IPerson {

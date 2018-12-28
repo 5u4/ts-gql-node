@@ -4,12 +4,19 @@ schema {
 
 type Query {
   hello(name: String): String!
+  movies(pagination: paginationInput): [Movie]!
   people(pagination: paginationInput): [Person]!
 }
 
 input paginationInput {
   page: Int!
   perPage: Int!
+}
+
+type Movie {
+  title: String!
+  released: Int!
+  tagline: String
 }
 
 type Person {
