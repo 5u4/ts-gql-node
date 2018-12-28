@@ -1,7 +1,14 @@
 import { Node, Record } from "neo4j-driver/types/v1";
 
 const collection = (records: Record[]) => {
-    return records.map(result => (result.get("p") as Node).properties as GQL.IPerson);
+    return records.map(result => {
+        const node = result.get("p") as Node;
+
+        return {
+            identity: node.identity as unknown as string,
+            ...node.properties,
+        } as GQL.IPerson;
+    });
 };
 
 const transform = (record: Record[]) => {

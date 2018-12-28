@@ -1,4 +1,5 @@
 type Movie {
+    identity: ID!
     title: String!
     released: Int!
     tagline: String

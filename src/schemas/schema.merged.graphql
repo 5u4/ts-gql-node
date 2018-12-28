@@ -14,12 +14,14 @@ input paginationInput {
 }
 
 type Movie {
+  identity: ID!
   title: String!
   released: Int!
   tagline: String
 }
 
 type Person {
+  identity: ID!
   name: String!
   born: Int
 }

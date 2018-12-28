@@ -46,6 +46,7 @@ perPage: number;
 
 interface IMovie {
 __typename: "Movie";
+identity: string;
 title: string;
 released: number;
 tagline: string | null;
@@ -53,6 +54,7 @@ tagline: string | null;
 
 interface IPerson {
 __typename: "Person";
+identity: string;
 name: string;
 born: number | null;
 }
