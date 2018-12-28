@@ -3,7 +3,9 @@ import { ResolverMap } from "../types/graphql.type";
 
 const resolvers: ResolverMap = {
     Query: {
-        people: async (): Promise<GQL.IPerson[]> => services.people.people(),
+        people: async (_, args: GQL.IPeopleOnQueryArguments): Promise<GQL.IPerson[]> => {
+            return services.people.people(args.pagination);
+        },
     },
 };
 

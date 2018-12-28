@@ -4,7 +4,12 @@ schema {
 
 type Query {
   hello(name: String): String!
-  people: [Person]!
+  people(pagination: paginationInput): [Person]!
+}
+
+input paginationInput {
+  page: Int!
+  perPage: Int!
 }
 
 type Person {

@@ -30,6 +30,15 @@ interface IHelloOnQueryArguments {
 name?: string | null;
 }
 
+interface IPeopleOnQueryArguments {
+pagination?: IPaginationInput | null;
+}
+
+interface IPaginationInput {
+page: number;
+perPage: number;
+}
+
 interface IPerson {
 __typename: "Person";
 name: string;
