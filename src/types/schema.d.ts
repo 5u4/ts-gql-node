@@ -23,10 +23,17 @@ column: number;
 interface IQuery {
 __typename: "Query";
 hello: string;
+people: Array<IPerson | null>;
 }
 
 interface IHelloOnQueryArguments {
 name?: string | null;
+}
+
+interface IPerson {
+__typename: "Person";
+name: string;
+born: number | null;
 }
 }
 
