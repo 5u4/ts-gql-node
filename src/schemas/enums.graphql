@@ -1,0 +1,5 @@
+enum PersonMovieRelation {
+    ACTED_IN
+    DIRECTED
+    ALL
+}

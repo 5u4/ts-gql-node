@@ -8,6 +8,12 @@ type Query {
   people(pagination: paginationInput): [Person]!
 }
 
+enum PersonMovieRelation {
+  ACTED_IN
+  DIRECTED
+  ALL
+}
+
 input paginationInput {
   page: Int!
   perPage: Int!
@@ -24,4 +30,5 @@ type Person {
   identity: ID!
   name: String!
   born: Int
+  movies(direction: PersonMovieRelation, pagination: paginationInput): [Movie]!
 }

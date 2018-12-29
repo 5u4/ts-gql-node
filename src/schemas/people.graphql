@@ -2,6 +2,7 @@ type Person {
     identity: ID!
     name: String!
     born: Int
+    movies(direction: PersonMovieRelation, pagination: paginationInput): [Movie]!
 }
 
 type Query {

@@ -139,18 +139,7 @@
         "arrow-return-shorthand": true,
         "no-empty-interface": true,
         "no-eval": true,
-        "no-shadowed-variable": [
-            true,
-            {
-                "class": true,
-                "enum": true,
-                "function": true,
-                "interface": false,
-                "namespace": true,
-                "typeAlias": false,
-                "typeParameter": false
-            }
-        ],
+        "no-shadowed-variable": false,
         "no-var-requires": true,
         "ordered-imports": [
             true,

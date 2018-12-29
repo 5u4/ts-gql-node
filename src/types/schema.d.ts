@@ -57,6 +57,18 @@ __typename: "Person";
 identity: string;
 name: string;
 born: number | null;
+movies: Array<IMovie | null>;
+}
+
+interface IMoviesOnPersonArguments {
+direction?: PersonMovieRelation | null;
+pagination?: IPaginationInput | null;
+}
+
+const enum PersonMovieRelation {
+ACTED_IN = 'ACTED_IN',
+DIRECTED = 'DIRECTED',
+ALL = 'ALL'
 }
 }
 
